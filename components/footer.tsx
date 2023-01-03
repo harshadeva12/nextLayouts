@@ -1,7 +1,7 @@
 export default function Navbar() {
   return (
     <ul>
-      <li>This is navbar</li>
+      <li>This is footer</li>
     </ul>
   )
 }

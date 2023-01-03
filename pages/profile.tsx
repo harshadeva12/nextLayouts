@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import Layout from "../components/layout";
+import Layout from "../components/first-layout";
 import type { NextPageWithLayout } from './_app'
 
 

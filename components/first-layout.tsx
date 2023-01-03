@@ -1,15 +1,15 @@
 import BaseLayout from './BaseLayout'
 import Navbar from './footer'
 
-const Layout: React.FC = ({ children }) => {
+const FirstLayout: React.FC = (props:any) => {
   return (
     <>
       <BaseLayout >
       <Navbar />
-      <main>{children}</main>
+      <main>{props.children}</main>
       </BaseLayout>
     </>
   );
 };
 
-export default Layout;
+export default FirstLayout;

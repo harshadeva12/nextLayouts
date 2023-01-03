@@ -14,7 +14,7 @@ import BaseLayout from "./BaseLayout";
 //   );
 // }
 
-const SecondLayout: React.FC = ({ children }) => {
+const SecondLayout: React.FC = (props:any) => {
   return (
     <>
       <BaseLayout>
@@ -22,7 +22,7 @@ const SecondLayout: React.FC = ({ children }) => {
         <ul>
           <li>second layout</li>
         </ul>
-        <main>{children}</main>
+        <main>{props.children}</main>
         </div>
       </BaseLayout>
     </>
