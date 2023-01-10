@@ -1,8 +1,77 @@
-.container {
-  padding: 0 2rem;
-}
 
 .container2 {
-  padding: 0 2rem;
-  background: red;
+  background: rgb(243, 243, 243);
+  
 }
+
+
+.card{
+  padding:30px;
+  text-align: center;
+}
+
+.description{
+  padding: 5%;
+  text-align: center;
+}
+.icon{
+  font-size:40px;
+}
+
+
+.inputdiv{
+  background: rgb(255, 255, 255);
+  padding-top: 35px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom:35px;
+  text-align: center;
+}
+
+.footer{
+  padding-left: 100px;
+  padding-top: 10px;
+  
+}
+.footerCard{
+  line-height: 8px;
+  background-color: rgba(252, 250, 247, 0.605);
+}
+.footerCard h2{
+  margin-bottom: 35px;
+} 
+.fitToScreen{
+  width: 100%;
+}
+
+.video-react-button.video-react-big-play-button.video-react-big-play-button-left{
+  display: none;
+  background-color: brown;
+}
+
+@media only screen and (min-width: 880px) {
+    .dontshowMobile {
+      position: absolute;
+      top: 50%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+    }
+}
+@media only screen and (max-width: 880px) {
+  .dontshowMobile {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
+}
+/* @media only screen and (min-width: 780px) {
+    .centered {
+      position: absolute;
+      top: 50%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+    }
+
+}
+ */

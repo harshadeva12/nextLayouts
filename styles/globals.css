@@ -24,3 +24,17 @@ a {
     background: black;
   }
 }
+@media (max-width:500px){
+  .headerMenu{
+    display: none;
+    color: aquamarine;
+  }
+}
+@media (min-width:500px){
+  .menuIcon{
+    display: none;
+  }
+}
+.ant-modal-footer{
+  display: none !important;
+}
