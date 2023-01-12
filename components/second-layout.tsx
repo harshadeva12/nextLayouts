@@ -13,6 +13,7 @@ import LoginModal from "./nav/login-modal";
 
 const SecondLayout: React.FC = (props:any) => {
   const [openMenu,setOpenMenu]=useState(false);
+  
   return (
     <>
       <BaseLayout>

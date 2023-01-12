@@ -1,16 +1,16 @@
 import type { ReactElement } from 'react'
 import NestedLayout from '../components/second-layout'
+import ThirdLayout from '../components/third-layout';
 import type { NextPageWithLayout } from './_app';
-import Wizard from '../components/form/wizard'
+import FormSteps from '../components/formTest/formSteps';
 
 const Home: NextPageWithLayout = () => {
-  return (<div><Wizard/></div>)
-
+  return (<div><FormSteps/></div>)
 }
 
 Home.getLayout = function getLayout(page: ReactElement) {
   return (
-      <NestedLayout>{page}</NestedLayout>
+      <ThirdLayout>{page}</ThirdLayout>
   )
 }
 
