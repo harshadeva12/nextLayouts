@@ -1,8 +1,9 @@
 import React from "react";
 import { Steps } from "antd";
 import { Button, Checkbox, Form, Input } from "antd";
-import FormStepperHeader from "./FormStepperHeader";
 import StepOne from './stepOne'
+import StepTwo from './stepTwo';
+import StepTwoTest from './stepTwoTest'
 
 type FormStepperProps = {
   onStepChange: Function;
@@ -12,7 +13,7 @@ type FormStepperProps = {
 const FormStepper: React.FC<FormStepperProps> = ({ onStepChange, step }) => {
   //data state
   const [data, setData] = React.useState({
-    fullname: "",
+    phone: "",
     email: "",
     password: "",
     jobtitle: "",
@@ -22,6 +23,7 @@ const FormStepper: React.FC<FormStepperProps> = ({ onStepChange, step }) => {
     shareProfile: false,
   });
   const onFinish = (values) => {
+    onStepChange(step + 1)
     console.log("Success:", values);
   };
   const onFinishFailed = (errorInfo) => {
@@ -54,7 +56,6 @@ const FormStepper: React.FC<FormStepperProps> = ({ onStepChange, step }) => {
   };
   return (
     <div className="form-stepper">
-      {/* <FormStepperHeader step={step} /> */}
       <Steps
         type="navigation"
         className="site-navigation-steps"
@@ -67,7 +68,7 @@ const FormStepper: React.FC<FormStepperProps> = ({ onStepChange, step }) => {
       />
       <div className="form-stepper__body">
         {/* Basic info form i.e step 1 */}
-        {step === 1 && (
+        {step === 0 && (
            <div style={{padding:'100px'}}>
            <h2>Where do you require cleanng</h2>
          <Form
@@ -111,6 +112,8 @@ const FormStepper: React.FC<FormStepperProps> = ({ onStepChange, step }) => {
            rules={[
              {
                type: 'email',
+               required: true,
+               message: "Please input email!",
              },
            ]}
          >
@@ -127,11 +130,10 @@ const FormStepper: React.FC<FormStepperProps> = ({ onStepChange, step }) => {
            ]}
          >
           {/* ccc */}
-           <Input />
+           <Input value={data.phone}  onChange={handleChange}/>
          </Form.Item>
          <Form.Item>
-         <Button type="primary" htmlType="submit"
-            onClick={() => onStepChange(step + 1)}>
+         <Button type="primary" htmlType="submit">
             Next
           </Button>
           </Form.Item>
@@ -139,44 +141,12 @@ const FormStepper: React.FC<FormStepperProps> = ({ onStepChange, step }) => {
        </div>
         )}
         {/* Background form i.e step 2 */}
-        {step === 2 && (
-          <div className="form-stepper__step2">
-            <h2>Background</h2>
-            <div className="input-group">
-              <label htmlFor="jobtitle">Job title</label>
-              <input
-                value={data.jobtitle}
-                type="text"
-                name="jobtitle"
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className="input-group">
-              <label htmlFor="education">Education</label>
-              <input
-                value={data.education}
-                type="text"
-                required
-                name="education"
-                onChange={handleChange}
-              />
-            </div>
-            <div className="input-group">
-              <label htmlFor="location">Location</label>
-              <input
-                value={data.location}
-                type="text"
-                required
-                name="location"
-                onChange={handleChange}
-              />
-            </div>
-          </div>
+        {step === 1 && (
+         <StepTwoTest />
         )}
 
         {/* Final  form i.e step 3 */}
-        {step === 3 && (
+        {step === 2 && (
           <div className="form-stepper__step3">
             <h2>Finalizing</h2>
             <div className="input-group check-group">
@@ -199,9 +169,10 @@ const FormStepper: React.FC<FormStepperProps> = ({ onStepChange, step }) => {
             </div>
           </div>
         )}
+      
       </div>
       <div className="form-stepper__action">
-        {step > 1 && (
+        {step > 0 && (
           <button
             className="btn btn-secondary"
             onClick={() => onStepChange(step - 1)}
@@ -210,7 +181,7 @@ const FormStepper: React.FC<FormStepperProps> = ({ onStepChange, step }) => {
           </button>
         )}
 
-        {step < 3 ? (
+        {step < 4 ? (
           <button
             className="btn btn-primary"
             onClick={() => onStepChange(step + 1)}

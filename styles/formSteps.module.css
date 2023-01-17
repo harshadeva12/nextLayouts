@@ -1,0 +1,97 @@
+.div{
+    padding: 5%;
+   
+}
+.div2{
+    margin: 6px 0px 6px 0px;
+}
+
+/* /////////// */
+
+.ant-radio-button-wrapper{
+    background-color: #28d415;
+}
+.ant-radio-button.ant-radio-button-checked{
+    background-color: #563a3a;
+}
+
+.radioButton{
+    padding: .5%;
+    margin:0px 22px 12px 0px ;
+    height:40px;
+    width:200px;
+    text-align:center;
+    border-radius: 10px;
+
+}
+
+.radioButtonTime{
+    padding: .5%;
+    margin:0px 22px 12px 0px ;
+    height:40px;
+    width:300px;
+    text-align:center;
+    border-radius: 10px;
+}
+
+.siteCalendarDemoCard{
+    width: 400px;
+    border: 1px solid #bf1111;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  
+.bb{
+    display: inline-block;
+    text-align: center;
+    background-color: rgba(255, 255, 255, .9);
+    border: 2px solid rgba(139, 139, 139, .3);
+    color: #adadad;
+    border-radius: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .2s;
+}
+
+.bb{
+    width: 200px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/* .bb::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    font-size: 12px;
+    padding: 2px 6px 2px 2px;
+   
+    transition: transform .3s ease-in-out;
+} */
+
+/* .aa:checked + label::before {
+    content: "\f00c";
+    transform: rotate(-360deg);
+    transition: transform .3s ease-in-out;
+} */
+
+.aa:checked + label {
+    border: 2px solid #1bdbf8;
+    background-color: #12bbd4;
+    color: #fff;
+    transition: all .2s;
+}
+
+
+.aa {
+  position: absolute;
+  opacity: 0;
+}

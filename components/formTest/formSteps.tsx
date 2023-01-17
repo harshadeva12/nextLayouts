@@ -3,7 +3,7 @@ import FormStepper from "./FormStepper"
 
 
 const FormSteps = () => {
-  const [step, setStep] = React.useState(0)
+  const [step, setStep] = React.useState(-1)
 
 	//handle step change
 	const handleStep = (step: number) => {
@@ -15,15 +15,15 @@ const FormSteps = () => {
       
         {
 						/** When the step is 0 , show main screen */
-						step === 0 && (
-              <button className="btn btn-primary" onClick={() => handleStep(1)}>
+						step === -1 && (
+              <button className="btn btn-primary" onClick={() => handleStep(0)}>
               Sign In
             </button>
 						)
 					}
         {
 						/** if the stepper is higher than 0, render stepper */
-						step > 0 && <FormStepper onStepChange={handleStep} step={step}/>
+						step > -1 && <FormStepper onStepChange={handleStep} step={step}/>
 					}
       </div>
     </>
