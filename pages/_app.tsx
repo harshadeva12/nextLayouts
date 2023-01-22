@@ -3,6 +3,8 @@ import type { ReactElement, ReactNode } from "react";
 import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 import FirstLayout from "../components/first-layout";
+import {Provider,useSelector } from 'react-redux';
+import { Store } from '../store';
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -16,5 +18,5 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) =><FirstLayout> {page}</FirstLayout>);
 
-  return getLayout(<Component {...pageProps} />);
+  return getLayout(<Provider store={Store}><Component {...pageProps} /></Provider>);
 }

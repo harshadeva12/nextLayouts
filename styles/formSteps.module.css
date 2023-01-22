@@ -24,6 +24,24 @@
     border-radius: 10px;
 
 }
+.radioButtonStep3{
+    padding: .5%;
+    margin:0px 22px 12px 0px ;
+    height:40px;
+    width:80px;
+    text-align:center;
+    border-radius: 10px;
+
+}
+.radioButtonStep4{
+    padding: .5%;
+    margin:0px 22px 12px 0px ;
+    height:40px;
+    width:200px;
+    text-align:center;
+    border-radius: 10px;
+
+}
 
 .radioButtonTime{
     padding: .5%;
@@ -94,4 +112,14 @@
 .aa {
   position: absolute;
   opacity: 0;
+}
+.table{
+    width: 100%;
+}
+
+.tableLeft{
+    text-align: right;
+}
+.input{
+    width: 25%;
 }

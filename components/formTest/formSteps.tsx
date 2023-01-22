@@ -1,9 +1,14 @@
 import React, { useState } from "react";
-import FormStepper from "./FormStepper"
+import FormStepper from "./FormStepper";
+import Increment from "../increment";
+import { count } from "console";
+import { stat } from "fs";
+import { useSelector } from 'react-redux'
 
 
 const FormSteps = () => {
-  const [step, setStep] = React.useState(-1)
+
+  const [step, setStep] = React.useState(-1);
 
 	//handle step change
 	const handleStep = (step: number) => {
